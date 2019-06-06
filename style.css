@@ -1,0 +1,315 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+}
+
+/******************
+*******************
+****   LOGO    ****
+*******************
+*******************/
+
+.logo {
+  font: 48px 'Arial Narrow', sans-serif;
+  /* I picked this font because it's the closest looking 'web safe' font http://cssfontstack.com/ */
+  color: #fefefe;
+  text-transform: uppercase;
+  letter-spacing: -4px;
+}
+
+/* stuff for both words */
+
+.logo span {
+  position: relative;
+}
+
+.logo span:before, .logo span:after {
+  content: '';
+  position: absolute;
+  border-width: 10px;
+  /* makes a nice, big 64px square */
+  border-style: solid;
+  border-color: transparent;
+  height: 0;
+  z-index: 10;
+}
+
+/* stuff for 1st word */
+
+.logo .word1 {
+  color: #dc006c;
+  margin-right: -3px;
+  transform: rotateY(180deg);
+  /* using Prefix free */
+  display: inline-block;
+  /* required for transform */
+  z-index: 10;
+  /* stack 1st word on top */
+}
+
+.logo .word1:before {
+  right: -4px;
+  /* would be left, but we flipped the word */
+  top: 3px;
+  border-top-color: #282828;
+  /* match background color */
+  border-right-color: #282828;
+  /* would be left, but we flipped the word */
+}
+
+.logo .word1:after {
+  left: 1px;
+  /* would be right, but we flipped the word */
+  bottom: 3px;
+  border-bottom-color: #282828;
+  border-left-color: #282828;
+  /* would be right, but we flipped the word */
+}
+
+/* stuff for 2nd word */
+
+.logo .word2 {
+  color: #6c757d;
+  z-index: 0;
+  /* stack 2nd word below */
+}
+
+.logo .word2:before {
+  left: -4px;
+  top: 3px;
+  border-top-color: #282828;
+  border-left-color: #282828;
+}
+
+.logo .word2:after {
+  right: -4px;
+  bottom: 3px;
+  border-bottom-color: #282828;
+  border-right-color: #282828;
+}
+
+/*  ********************************* */
+
+.navbar {
+  padding: .8rem;
+}
+
+.navbar-nav li {
+  padding-right: 20px;
+}
+
+.navbar-fonts {
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 1.5em;
+}
+
+.nav-link {
+  font-size: 1.1em;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-caption h1 {
+  font-size: 400%;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 15px #000;
+}
+
+.carousel-caption h3 {
+  font-size: 200%;
+  font-weight: 500;
+  text-shadow: 1px 1px 1px 10px #000;
+  padding-bottom: 1rem;
+}
+
+.btn-primary {
+  background-color: #6648b1;
+  border: 1px solid #563d7c;
+}
+
+.btn-primary:hover {
+  background-color: #563d7c;
+  border: 1px solid #563d7c;
+}
+
+.jumbotron {
+  padding: 1rem;
+  border-radius: 0;
+}
+
+.padding {
+  padding-bottom: 2rem;
+}
+
+.welcome {
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.welcome hr {
+  border-top: 2px solid #b4b4b4;
+  width: 95%;
+  margin-top: .3rem;
+  margin-bottom: 1rem;
+}
+
+.fa-cuttlefish {
+  color: #6088ea;
+}
+
+.fa-js {
+  color: #fadf3d;
+}
+
+.fa-python {
+  color: #3373a4;
+}
+
+.fa-php {
+  color: #4f5b91;
+}
+
+.fa-cuttlefish, .fa-js, .fa-python, .fa-php {
+  font-size: 4em;
+  margin: 1rem;
+}
+
+.fa-code {
+  color: #e54d26;
+}
+
+.fa-bold {
+  color: #563d7c;
+}
+
+.fa-css3 {
+  color: #2163af;
+}
+
+.fa-code, .fa-bold, .fa-css3 {
+  font-size: 4em;
+  margin: 1rem;
+}
+
+.fun {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.png {
+  max-width: 100%;
+}
+
+.social a {
+  font-size: 4.5em;
+  padding: 3rem;
+}
+
+.fa-facebook {
+  color: #3b5998;
+}
+
+.fa-twitter {
+  color: #00aced;
+}
+
+.fa-google-plus-g {
+  color: #dd4b39;
+}
+
+.fa-instagram {
+  color: #517fa4;
+}
+
+.fa-youtube {
+  color: #bb0000;
+}
+
+.fa-github {
+  color: #000000;
+}
+
+.fa-line {
+  color: #00b424;
+}
+
+.fa-facebook:hover, .fa-twitter:hover, .fa-google-plus-g:hover, .fa-instagram:hover, .fa-youtube:hover, .fa-line:hover, .fa-github:hover {
+  color: #d5d5d5;
+}
+
+footer {
+  background-color: #3f3f3f;
+  color: #d5d5d5;
+  padding-top: 2rem;
+}
+
+hr.light {
+  border-top: 1px solid #d5d5d5;
+  width: 75%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+}
+
+footer a {
+  color: #d5d5d5;
+}
+
+hr.light-100 {
+  border-top: 1px solid #d5d5d5;
+  width: 100%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+}
+
+form button {
+  margin: 5px 0px;
+}
+
+textarea {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.post {
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+.comments-section {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+}
+
+.comment {
+  margin-bottom: 10px;
+}
+
+.comment .comment-name {
+  font-weight: bold;
+}
+
+.comment .comment-date {
+  font-style: italic;
+  font-size: 0.8em;
+}
+
+.comment-details {
+  width: 91.5%;
+  float: left;
+}
+
+#comment_form {
+  margin-top: 10px;
+}
